@@ -1,0 +1,135 @@
+{
+  "GET /api/tickets": [
+    {
+      "id": 1,
+      "from_city": "Томск",
+      "to_city": "Новосибирск",
+      "transport_type": "Автобус",
+      "price": 1250.0,
+      "distance_km": 265.0,
+      "travel_time_hours": 4.5,
+      "available_seats": 12
+    },
+    {
+      "id": 2,
+      "from_city": "Томск",
+      "to_city": "Москва",
+      "transport_type": "Самолёт",
+      "price": 8900.0,
+      "distance_km": 2880.0,
+      "travel_time_hours": 4.2,
+      "available_seats": 8
+    },
+    {
+      "id": 3,
+      "from_city": "Москва",
+      "to_city": "Санкт-Петербург",
+      "transport_type": "Поезд",
+      "price": 3200.0,
+      "distance_km": 700.0,
+      "travel_time_hours": 8.0,
+      "available_seats": 24
+    },
+    {
+      "id": 4,
+      "from_city": "Казань",
+      "to_city": "Самара",
+      "transport_type": "Автобус",
+      "price": 980.0,
+      "distance_km": 360.0,
+      "travel_time_hours": 5.0,
+      "available_seats": 5
+    },
+    {
+      "id": 5,
+      "from_city": "Екатеринбург",
+      "to_city": "Пермь",
+      "transport_type": "Поезд",
+      "price": 1450.0,
+      "distance_km": 360.0,
+      "travel_time_hours": 6.3,
+      "available_seats": 16
+    }
+  ],
+  "GET /api/tickets?sort_by=price&order=desc": [
+    {
+      "id": 2,
+      "from_city": "Томск",
+      "to_city": "Москва",
+      "transport_type": "Самолёт",
+      "price": 8900.0,
+      "distance_km": 2880.0,
+      "travel_time_hours": 4.2,
+      "available_seats": 8
+    },
+    {
+      "id": 3,
+      "from_city": "Москва",
+      "to_city": "Санкт-Петербург",
+      "transport_type": "Поезд",
+      "price": 3200.0,
+      "distance_km": 700.0,
+      "travel_time_hours": 8.0,
+      "available_seats": 24
+    },
+    {
+      "id": 5,
+      "from_city": "Екатеринбург",
+      "to_city": "Пермь",
+      "transport_type": "Поезд",
+      "price": 1450.0,
+      "distance_km": 360.0,
+      "travel_time_hours": 6.3,
+      "available_seats": 16
+    },
+    {
+      "id": 1,
+      "from_city": "Томск",
+      "to_city": "Новосибирск",
+      "transport_type": "Автобус",
+      "price": 1250.0,
+      "distance_km": 265.0,
+      "travel_time_hours": 4.5,
+      "available_seats": 12
+    },
+    {
+      "id": 4,
+      "from_city": "Казань",
+      "to_city": "Самара",
+      "transport_type": "Автобус",
+      "price": 980.0,
+      "distance_km": 360.0,
+      "travel_time_hours": 5.0,
+      "available_seats": 5
+    }
+  ],
+  "GET /api/tickets/stats": {
+    "records_count": 5,
+    "fields": {
+      "price": {
+        "count": 5,
+        "average": 3156.0,
+        "minimum": 980.0,
+        "maximum": 8900.0
+      },
+      "distance_km": {
+        "count": 5,
+        "average": 913.0,
+        "minimum": 265.0,
+        "maximum": 2880.0
+      },
+      "travel_time_hours": {
+        "count": 5,
+        "average": 5.6,
+        "minimum": 4.2,
+        "maximum": 8.0
+      },
+      "available_seats": {
+        "count": 5,
+        "average": 13.0,
+        "minimum": 5.0,
+        "maximum": 24.0
+      }
+    }
+  }
+}
